@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype</title>
+</head>
+<body>
+    <script>
+        function Dog(name,color,age,gender){
+            this.name=name;
+            this.color = color;
+            this.age = age;
+            this.gender = gender;
+        }
+        console.log(Dog,Dog.prototype);
+        Dog.prototype.family='시추';
+        Dog.prototype.breed=function(){
+            return this.name+" "+this.age+" "+this.family;
+        }
+        console.log(Dog,Dog.prototype);
+
+        let pet = new Dog("댕댕이","검은색",2,"숫컷");
+        let pet2 = new Dog("흰둥이","하얀색",4,"암컷");
+        console.log(pet,pet2);
+        console.log(pet.breed(),pet2.breed());
+        
+        delete pet.color;
+        console.log(pet);
+
+        let obj = {a:1,b:2,c:3}; //객체는 iterable 하지 않음 --->즉 of말고 in을 해야됨
+        let arr=[1,4,3];
+        for(let item in obj){ //이건 값으로 쫓아가는거 
+            console.log(item,obj[item]);
+        }
+        for(let item in arr){           // arr은 in도 가능 in은 key를 출력 of는 value값 출력 
+            console.log(arr[item]);
+        }
+        for(let item of arr){  //객체 아닌 배열은 of를 활용하면 key값을 출력할수있음
+            console.log(item);
+        }
+        
+    </script>
+</body>
+</html>

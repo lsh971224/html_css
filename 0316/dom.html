@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        .color{color:brown};
+        .color2{color:blue};
+    </style>
+</head>
+<body>
+    <div>
+        <h1>도시</h1>
+        <ul>
+            <li id="one" class = "color" >서울</li>
+            <li id="two" class = "color" >대구</li>
+            <li id="three" class = "color" >부산</li>
+            <li id="four">대전</li>
+        </ul>
+    </div>
+    <script>
+        const ele = document.querySelector('#two');
+        console.log(ele,ele.parentNode);
+        ele.parentNode.className='color2';
+        
+        const ele2 = document.querySelector('ul');
+        console.log(ele2);
+        console.log(ele2.firstChild,ele2.lastChild);
+        console.log(ele2.firstElementChild,ele2.lastElementChild);
+        ele2.firstElementChild.className='color2';
+        ele2.lastElementChild.className='color';
+        console.log(ele2.firstElementChild.nextElementSibling,ele2.lastElementChild.previousElementSibling);
+        // ele3=document.querySelector('#one');
+        const ele3=document.getElementById('one');
+        console.log(ele3);
+        console.log(ele3.nodeName,ele3.nodeType,ele3.nodeValue);
+        
+        const textnode = ele3.firstChild;
+        console.dir(textnode);
+        console.log(textnode.nodeName,textnode.nodeType,textnode.nodeValue);
+        
+        textnode.nodeValue='인천';
+        console.dir(textnode);
+        console.log(textnode.nodeName,textnode.nodeType,textnode.nodeValue);
+        
+        console.log(ele.textContent);
+        console.log(ele3.textContent);
+
+        ele3.textContent = '서울';
+        ele3.innerHTML += '<strong class="color">,한국</strong>';
+        // ele3.innerText = '<strong class="color">,한국</strong>';
+
+        const newEle = document.createElement('li'); //요소를 생성 
+        const newText = document.createTextNode('북경');
+        document.querySelector('ul').appendChild(newEle); //텍스트 노드 생성
+        //텍스트 노드를 해당 요소의 자식으로 DOM트리 구조 상에 추가
+        newEle.appendChild(newText);
+        //해당 요소를 메인 DOM 트리 구조에 추가
+        document.querySelector('ul').appendChild(newEle);
+
+        const removeEle = document.getElementById('one');
+        
+        document.querySelector('ul').insertBefore(newEle,removeEle);
+
+        newText.insertData(0,'중국,');
+        document.querySelector('ul').removeChild(removeEle);
+    </script>   
+     <input type="text">
+    <script>
+       const input = document.querySelector('input[type="text"]');
+       console.log(input);  
+       if(!input.hasAttribute('placeholder')){
+        input.setAttribute('placeholder','hello!');
+        }
+        console.log(input.getAttribute('placeholder'));
+        input.removeAttribute('placeholder');
+    </script>
+</body>
+</html>

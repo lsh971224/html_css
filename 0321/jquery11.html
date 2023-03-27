@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../0320/js/jquery-3.6.4.js"></script>
+
+    <style>
+        .siblings *{
+            display : block; border:2px solid lightgray;
+            color:lightgray;padding: 5px;margin: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="siblings">
+        <div >div(parent)
+            <p>p</p>
+            <span>span</span>
+            <h2>h2</h2>
+            <h3>h3</h3>
+            <h4>h4</h4>
+            <h5>h5</h5>
+            <h6>h6</h6>
+            <p>p</p>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            console.log($('h2').siblings());
+            // $('h2').siblings().css({'color':'red','boreder':'2px solid red'});
+            // $('h2').next().css({'color':'blue','border':'2px solid blue'});
+            // $('h2').nextAll().css({'color':'green','border':'2px solid green'});
+            // $('h2').nextUntil('h6').css({'color':'blue','border':'2px solid violet'});
+            $('h6').prev().css({'color':'blue','border':'2px solid violet'});
+        })
+    </script>
+</body>
+</html>
