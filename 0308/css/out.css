@@ -1,0 +1,11 @@
+body{
+    background-color: silver;
+}
+h1{
+    /* 정렬 */
+    text-align: center;
+}
+p{
+    color: blue;
+    text-decoration: line-through;
+}

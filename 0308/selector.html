@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS 선택자</title>
+    <style>
+        /*요소 선택자*/
+        h4{
+            color: teal;
+        }
+        /*ID를 이용한 선택자 */
+        #heading{
+            color:rgba(100, 20, 150, 30)
+        }
+        /*클래스를 이용한 선택자 */
+        .title{
+            color: rgba(255, 0, 0, 0.1); opacity:0.1;
+        }
+        /*그룹선택자","를 통해서 계속 연결" hex 색상*/
+        h2,#heading,title{
+            color: #000000;
+        }
+        /*전체선택자 hs1 hs1a 색상*/
+        *{
+            color : hsl(152, 77%, 66%)
+        }
+    </style>
+</head>
+<body>
+    <h3>선택자를 통한 선택</h3>
+    <h4>해당 부분에 적용</h4>
+    <h4 id = "heading">아이디를 통해 적용</h4>
+    <h4 class="title">클래스를 통해 적용</h4>
+    <h2 class="title">클래스를 통해 적용</h2>
+    <h4>그룹 선택자</h4>
+</body>
+</html>

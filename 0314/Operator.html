@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        console.log("산술 연산자");
+        let x=10,y=4;
+        console.log(x,"?",y,"=");
+        console.log("+",x+y);
+        console.log("-",x-y);
+        console.log("x",x*y);
+        console.log("/",x/y);
+        console.log("나머지",x%y);
+        console.log("거듭제곱",x**y);
+        
+        console.log("대입연산자");
+        x=10,y=10;
+        console.log(x-=4);
+        console.log(x+=3);
+        console.log(x*=2);
+        console.log(x/=2);
+        console.log(x%=2);
+        console.log(x**=4)
+        
+        console.log("증감 연산자");
+        x=10,y=10;
+        console.log(--x*3);
+        console.log(x);
+        console.log(y--*3);
+        console.log(y);
+        x=10;
+        y=x-- + 5 + --x;
+        console.log(y);
+        
+        console.log("삼항 연산자");
+        x=3,y=6;
+        let result=(x>y)?x:y;
+        cosole.log("두 수",x,",","중 큰수는",result);
+    </script>
+        <h3>void 연산자</h3>
+        <a herf="javascript:void(0)">링크</a>
+        <br>
+        <a href="javascript:void(document.body.style.background='red')">문서 배경색 변환</a>
+        <script>
+            let input = window.prompt("아무거나 치세요.");
+            document.write(input);
+            input = window.confirm("둘중 하나");
+            document.write(input);
+        </script>
+    
+</body>
+</html>

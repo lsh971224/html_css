@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css box model outline</title>
+    <style>
+        p{
+            background-color: lightgreen;
+            border: 3px solid black;
+            padding: 10px; margin: 10px;
+            outline-width: 10px;
+            outline-color: red;
+            outline-offset: 10px;
+        }
+        .dotted{
+            outline-style: dotted ;
+        }
+        .dashed{
+            outline-style: dashed;
+        }
+        .solid{
+            outline-style: solid;
+        }
+        .dotted{outline-style : dotted}
+        .dashed{outline-style : dashed}
+        .solid{outline-style : solid }
+        .double{outline-style : double}
+        .groove{outline-style : groove}
+        .ridge{outline-style : ridge}
+        .inset{outline-style :inset }
+        .outset{outline-style :outset }
+        .none{outline-style : none}
+        .hidden{outline-style :hidden }
+    </style>
+</head>
+<body>
+    <!-- dotted는 점선 -->
+    <p class="dotted">dotted</p>
+    <!-- dashed 직선이 연결된 형태의 점선 -->
+    <p class="dashed">dashed</p>
+    <!-- 쭉 이어진 실선 -->
+    <p class="solid">solid</p>
+    <!-- 두줄로 나오는 선 -->
+    <p class="double">double</p>
+    <!-- 테두리가 파져보이는거 -->
+    <p class="groove">groove</p>
+    <!--  -->
+    <p class="ridge">ridge</p>
+    <!--  -->
+    <p class="inset">inset</p>
+    <p class="outset">outset</p>
+    <p class="none">none</p>
+    <!-- 안보이게 하는거 -->
+    <p class="hidden">hidden</p>
+</body>
+</html>

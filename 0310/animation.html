@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS animation</title>
+    <style>
+        p{height:50px; width: 450px;}
+        @keyframes move{
+            from{margin-left: 100%;}
+            to{margin-left: 0%;}
+        }
+        .ani1{
+            animation-name: move;
+            animation-duration: 4s;
+            animation-iteration-count: 3;
+        } 
+        @keyframes color{
+            0%{
+                background-color: red;
+                transform: rotateY(0deg) rotateX(0deg);
+            }
+            15%{
+                background-color: orange;
+            }
+            30%{
+                background-color: yellow;
+            }
+            45%{
+                background-color: green;
+                transform: rotateY(180deg) rotateX(180deg) ;
+            }
+            60%{
+                background-color: blue;
+            }
+            75%{
+                background-color: navy;
+            }
+            100%{
+                background-color: purple;
+                transform: rotateY(180deg) rotateX(180deg);
+            }
+        }
+        .ani2{
+            animation-name: color;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+    </style>
+</head>
+<body>
+    <h1>@keyframes를 이용한 애니메이션 효과</h1>
+    <p class="ani1">애니메이션 효과 3회 반복</p>
+    <p class="ani2">애니메이션 효과 무한반복</p>
+    <p class="ani3">애니메이션 초반 대기</p>
+    <div id="foword">오른쪽 회전</div>
+    <div id="backward">왼쪽 회전</div>
+    <div id="ani-p">애니메이션 속성</div>
+</body>
+</html>
